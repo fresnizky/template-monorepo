@@ -1,0 +1,15 @@
+{
+  "name": "@project/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo \"Would start development server\"",
+    "build": "echo \"Would build the app\"",
+    "lint": "echo \"Would lint the app\""
+  },
+  "dependencies": {
+    "@project/shared-ui": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
