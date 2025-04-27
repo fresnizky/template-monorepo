@@ -1,0 +1,24 @@
+{
+  "name": "turborepo-monorepo-template",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A standardized, customizable monorepo template using Turborepo, PNPM, and modern web technologies",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "monorepo",
+    "turborepo",
+    "pnpm",
+    "react",
+    "laravel",
+    "expo"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.9.0",
+  "engines": {
+    "node": ">=16.0.0",
+    "pnpm": ">=7.0.0"
+  }
+}
