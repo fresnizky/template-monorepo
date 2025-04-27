@@ -1,0 +1,14 @@
+# Set default behavior to automatically normalize line endings.
+* text=auto eol=lf
+
+# Denote all files that are binary and should not be modified.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mp4 binary
+*.mov binary
+*.webm binary
+*.woff binary
+*.woff2 binary

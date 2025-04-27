@@ -30,17 +30,29 @@ template-monorepo/
 │   ├── mobile/        # Expo mobile app
 │   └── api/           # Laravel backend
 ├── packages/          # Shared packages/libraries
-│   ├── typescript-config/    # Shared TypeScript configs
-│   ├── biome-config/         # Shared Biome configs
-│   ├── tailwind-config/      # Shared Tailwind configs
-│   ├── nativewind-config/    # Shared NativeWind configs
-│   ├── ui-web/               # Shared web UI components
-│   ├── ui-mobile/            # Shared mobile UI components
-│   ├── hooks/                # Shared React hooks
-│   ├── state/                # Shared state management
-│   └── themes/               # Shared design tokens
+│   ├── config/        # Configuration packages
+│   │   ├── typescript/      # TypeScript configurations
+│   │   ├── biome/           # Biome configurations
+│   │   ├── tailwind/        # Tailwind CSS configurations
+│   │   └── nativewind/      # NativeWind configurations
+│   ├── ui/            # UI component libraries
+│   │   ├── web/             # Web UI components
+│   │   └── mobile/          # Mobile UI components
+│   └── util/          # Utility packages
+│       ├── hooks/           # Shared React hooks
+│       ├── state/           # Shared state management
+│       └── themes/          # Shared design tokens
 └── scripts/           # Project scripts and utilities
 ```
+
+## Package Naming Conventions
+
+This monorepo uses semantic namespaces to organize packages:
+
+- `@app/*` - Application packages (e.g., `@app/web`, `@app/mobile`)
+- `@config/*` - Configuration packages (e.g., `@config/typescript`, `@config/tailwind`)
+- `@ui/*` - UI component libraries (e.g., `@ui/web`, `@ui/mobile`)
+- `@util/*` - Utility packages (e.g., `@util/hooks`, `@util/state`)
 
 ## Development
 
@@ -55,24 +67,31 @@ template-monorepo/
 
 To add a new shared package to the monorepo:
 
-1. Create a new directory in the `packages/` folder:
+1. Create a new directory in the appropriate namespace folder within `packages/`:
 
    ```bash
-   mkdir -p packages/my-package
+   # For a new UI component package
+   mkdir -p packages/ui/my-package
+
+   # For a new configuration package
+   mkdir -p packages/config/my-package
+
+   # For a new utility package
+   mkdir -p packages/util/my-package
    ```
 
 2. Initialize the package:
 
    ```bash
-   cd packages/my-package
+   cd packages/ui/my-package
    pnpm init
    ```
 
-3. Update the package.json with the appropriate name using the workspace prefix:
+3. Update the package.json with the appropriate name using the namespace prefix:
 
    ```json
    {
-     "name": "@template/my-package",
+     "name": "@ui/my-package",
      "version": "0.1.0",
      "private": true
    }
@@ -81,7 +100,7 @@ To add a new shared package to the monorepo:
 4. Add the necessary build, test, and lint scripts to align with the Turborepo pipeline
 5. Reference the package in other projects using:
    ```bash
-   pnpm add @template/my-package --workspace
+   pnpm add @ui/my-package --workspace
    ```
 
 ### Adding a New Application
@@ -110,11 +129,11 @@ To add a new application to the monorepo:
    composer create-project laravel/laravel my-app
    ```
 
-3. Update the package.json with the appropriate name using the workspace prefix:
+3. Update the package.json with the appropriate name using the namespace prefix:
 
    ```json
    {
-     "name": "@template/my-app",
+     "name": "@app/my-app",
      "private": true
    }
    ```
@@ -135,7 +154,7 @@ To add a new application to the monorepo:
 5. Extend shared configurations as needed:
    ```json
    {
-     "extends": ["@template/typescript-config/react.json"]
+     "extends": "@config/typescript/react.json"
    }
    ```
 
@@ -143,31 +162,31 @@ To add a new application to the monorepo:
 
 ### TypeScript Config
 
-The `typescript-config` package provides base TypeScript configurations for different types of projects. To use:
+The `@config/typescript` package provides base TypeScript configurations for different types of projects. To use:
 
 ```json
 {
-  "extends": "@template/typescript-config/react.json"
+  "extends": "@config/typescript/react.json"
 }
 ```
 
 ### Biome Config
 
-The `biome-config` package provides unified linting and formatting configurations. To use:
+The `@config/biome` package provides unified linting and formatting configurations. To use:
 
 ```json
 {
-  "extends": "@template/biome-config/base.json"
+  "extends": "@config/biome/base.json"
 }
 ```
 
 ### Tailwind Config
 
-The `tailwind-config` package provides a consistent styling foundation for web applications. To use:
+The `@config/tailwind` package provides a consistent styling foundation for web applications. To use:
 
 ```js
 // tailwind.config.js
-import { createConfig } from "@template/tailwind-config";
+import { createConfig } from "@config/tailwind";
 
 export default createConfig({
   // Project-specific overrides

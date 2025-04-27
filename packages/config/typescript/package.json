@@ -1,0 +1,26 @@
+{
+  "name": "@config/typescript",
+  "version": "0.1.0",
+  "description": "Shared TypeScript configurations for the template monorepo",
+  "private": true,
+  "main": "index.js",
+  "files": [
+    "base",
+    "react",
+    "react-native",
+    "node",
+    "index.js",
+    "README.md"
+  ],
+  "scripts": {
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [
+    "typescript",
+    "config",
+    "template",
+    "monorepo"
+  ],
+  "author": "",
+  "license": "MIT"
+}

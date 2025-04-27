@@ -1,0 +1,22 @@
+{
+  "name": "@ui/example-button",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Web UI component library to demonstrate monorepo structure",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint": "echo \"No linting configured yet\"",
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@config/typescript": "workspace:*",
+    "@types/react": "^18.2.0",
+    "typescript": "^5.0.0"
+  }
+}

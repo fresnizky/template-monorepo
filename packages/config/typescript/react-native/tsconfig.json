@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "React Native",
+  "extends": "../base/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-native",
+    "lib": ["es2022"],
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "types": ["react-native"],
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true
+  }
+}
