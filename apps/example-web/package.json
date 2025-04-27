@@ -1,0 +1,25 @@
+{
+  "name": "@template/example-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Example web application to demonstrate monorepo structure",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "echo \"Would lint the app\""
+  },
+  "dependencies": {
+    "@template/example-ui": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@template/typescript-config": "workspace:*",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.8"
+  }
+}

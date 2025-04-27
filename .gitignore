@@ -36,3 +36,6 @@ tasks.json
 tasks/
 scripts/
 .cursor/
+
+# TypeScript
+*.tsbuildinfo
