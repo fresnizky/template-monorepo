@@ -1,5 +1,5 @@
 {
-  "name": "@template/typescript-config",
+  "name": "@config/typescript",
   "version": "0.1.0",
   "description": "Shared TypeScript configurations for the template monorepo",
   "private": true,

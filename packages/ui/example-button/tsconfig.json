@@ -1,5 +1,5 @@
 {
-  "extends": "@template/typescript-config/react/tsconfig.json",
+  "extends": "@config/typescript/react/tsconfig.json",
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",

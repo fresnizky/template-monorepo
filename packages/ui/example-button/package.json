@@ -1,8 +1,8 @@
 {
-  "name": "@template/example-ui",
+  "name": "@ui/example-button",
   "version": "0.1.0",
   "private": true,
-  "description": "Example UI component library to demonstrate monorepo structure",
+  "description": "Web UI component library to demonstrate monorepo structure",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
-    "@template/typescript-config": "workspace:*",
+    "@config/typescript": "workspace:*",
     "@types/react": "^18.2.0",
     "typescript": "^5.0.0"
   }

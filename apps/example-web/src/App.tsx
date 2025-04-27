@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@template/example-ui";
+import { Button } from "@ui/example-button";
 
 const App: React.FC = () => {
   return (

@@ -1,5 +1,5 @@
 {
-  "name": "@template/example-web",
+  "name": "@app/example-web",
   "version": "0.1.0",
   "private": true,
   "description": "Example web application to demonstrate monorepo structure",
@@ -10,12 +10,12 @@
     "lint": "echo \"Would lint the app\""
   },
   "dependencies": {
-    "@template/example-ui": "workspace:*",
+    "@ui/example-button": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@template/typescript-config": "workspace:*",
+    "@config/typescript": "workspace:*",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react": "^4.2.1",

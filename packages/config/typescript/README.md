@@ -15,7 +15,7 @@ Shared TypeScript configurations for applications and packages in the template m
 
 ```json
 {
-  "extends": "@template/typescript-config/base/tsconfig.json",
+  "extends": "@config/typescript/base/tsconfig.json",
   "compilerOptions": {
     "outDir": "dist"
   },
@@ -28,7 +28,7 @@ Shared TypeScript configurations for applications and packages in the template m
 
 ```json
 {
-  "extends": "@template/typescript-config/react/tsconfig.json",
+  "extends": "@config/typescript/react/tsconfig.json",
   "compilerOptions": {
     "outDir": "dist"
   },
@@ -41,7 +41,7 @@ Shared TypeScript configurations for applications and packages in the template m
 
 ```json
 {
-  "extends": "@template/typescript-config/react-native/tsconfig.json",
+  "extends": "@config/typescript/react-native/tsconfig.json",
   "compilerOptions": {
     "outDir": "dist"
   },
@@ -54,7 +54,7 @@ Shared TypeScript configurations for applications and packages in the template m
 
 ```json
 {
-  "extends": "@template/typescript-config/node/tsconfig.json",
+  "extends": "@config/typescript/node/tsconfig.json",
   "compilerOptions": {
     "outDir": "dist"
   },

@@ -11,7 +11,7 @@ This is a simple example UI component library that demonstrates how to create sh
 ## Usage
 
 ```jsx
-import { Button } from "@template/example-ui";
+import { Button } from "@ui/example-button";
 
 function MyComponent() {
   return (
