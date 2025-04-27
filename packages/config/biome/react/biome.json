@@ -1,0 +1,41 @@
+{
+  "extends": ["../base/biome.json"],
+  "linter": {
+    "rules": {
+      "a11y": {
+        "useAltText": "error",
+        "useKeyWithClickEvents": "error",
+        "useValidAnchor": "error"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "warn",
+        "noConsoleLog": "warn"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "error",
+        "useHookAtTopLevel": "error"
+      },
+      "style": {
+        "noDefaultExport": "off",
+        "useImportType": "warn"
+      }
+    }
+  },
+  "files": {
+    "ignore": ["node_modules", "dist", "build", ".next", "coverage"]
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "trailingCommas": "es5",
+      "semicolons": "always"
+    },
+    "jsxRuntime": "reactClassic"
+  },
+  "formatter": {
+    "enabled": true,
+    "indentWidth": 2,
+    "indentStyle": "space",
+    "lineWidth": 100
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@template/biome-config",
+  "version": "0.1.0",
+  "description": "Shared Biome configuration for linting, formatting, and checking across all projects",
+  "private": true,
+  "main": "index.js",
+  "files": [
+    "base",
+    "react",
+    "node",
+    "react-native",
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "biome check .",
+    "test": "node test-biome.js"
+  },
+  "keywords": [
+    "biome",
+    "linting",
+    "formatting"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@biomejs/biome": "^1.7.0"
+  }
+}

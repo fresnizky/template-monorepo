@@ -1,0 +1,41 @@
+{
+  "extends": ["../base/biome.json"],
+  "linter": {
+    "rules": {
+      "suspicious": {
+        "noConsoleLog": "off"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "off"
+      },
+      "style": {
+        "noDefaultExport": "off",
+        "useNodejsImportProtocol": "error"
+      }
+    }
+  },
+  "files": {
+    "ignore": ["node_modules", "dist", "build", "coverage"]
+  },
+  "javascript": {
+    "globals": [
+      "process",
+      "__dirname",
+      "__filename",
+      "module",
+      "exports",
+      "require"
+    ],
+    "formatter": {
+      "quoteStyle": "single",
+      "trailingCommas": "es5",
+      "semicolons": "always"
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentWidth": 2,
+    "indentStyle": "space",
+    "lineWidth": 100
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "extends": ["../react/biome.json"],
+  "linter": {
+    "rules": {
+      "a11y": {
+        "useAltText": "off",
+        "useKeyWithClickEvents": "off",
+        "useValidAnchor": "off"
+      },
+      "suspicious": {
+        "noConsoleLog": "warn"
+      },
+      "style": {
+        "noNegationElse": "warn",
+        "useShorthandAssign": "error"
+      }
+    }
+  },
+  "files": {
+    "ignore": ["node_modules", "ios", "android", ".expo", "build", "coverage"]
+  },
+  "javascript": {
+    "globals": ["global", "__DEV__", "Dimensions", "fetch"]
+  }
+}
